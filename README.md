@@ -19,14 +19,27 @@ O objetivo é ajudar o usuário a descobrir se está dentro do peso ideal de for
 
 ---
 
+## 🚀 Tecnologias Utilizadas
+
+- HTML5  
+- CSS3 (com animações e responsividade)  
+- JavaScript (DOM e eventos)  
+
+
+---
+
 ## 🚀 Funcionalidades
 
-- Cálculo instantâneo do IMC  
-- Classificação automática (Abaixo do peso, Normal, Sobrepeso, Obesidade, etc.)  
-- Cores dinâmicas para cada faixa de IMC  
-- Interface responsiva e moderna  
-- Suporte ao uso da tecla **Enter** para calcular  
-- Código separado em HTML, CSS e JavaScript para fácil manutenção  
+- Entrada de **altura** e **peso** com validação.  
+- Cálculo automático do **IMC**.  
+- Exibição dinâmica da categoria correspondente:
+  - Abaixo do peso  
+  - Peso normal  
+  - Sobrepeso  
+  - Obesidade  
+  - Obesidade grave  
+- Cores e animações diferentes conforme o resultado.  
+- Permite calcular pressionando **Enter**.  
 
 ---
 
@@ -65,8 +78,21 @@ calculadora-imc/
 
 ## 💡 Exemplo de uso
 
-> 🧮 “Uma pessoa com 1.80m e 80kg tem um IMC de 24.69 — considerado Peso Normal.”
-
+1. Abra o arquivo `index.html` no navegador.  
+2. Digite sua **altura em metros** no primeiro campo.  
+   - Exemplo: `1.75`
+3. Digite seu **peso em quilogramas** no segundo campo.  
+   - Exemplo: `70`
+4. Clique em **"Calcular IMC"** (ou pressione **Enter**).  
+5. O resultado será exibido logo abaixo do botão, indicando:
+   - Seu **IMC numérico** (ex: 22.86)  
+   - Sua **categoria** (ex: “Peso normal”)  
+6. O fundo do resultado muda de cor conforme a categoria:
+   - 🩵 Azul claro → abaixo do peso  
+   - 💚 Verde → peso normal  
+   - 💛 Amarelo → sobrepeso  
+   - 🧡 Laranja → obesidade  
+   - ❤️ Vermelho → obesidade grave  
 ---
 
 ## 🧑‍💻 Desenvolvido por
