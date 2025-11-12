@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Calculadora de IMC</title>
-   
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
@@ -21,66 +20,19 @@
             <input type="number" id="peso" placeholder="Ex: 70" step="0.1" min="20" max="300">
         </div>
 
-        <button onclick="calcularIMC()">Calcular IMC</button>
+        <button id="btnCalcular">Calcular IMC</button>
 
         <div id="resultado" class="result"></div>
 
         <div class="info">
             <strong>IMC</strong> (Índice de Massa Corporal) é uma medida internacional usada para calcular se uma pessoa está no peso ideal.
         </div>
+
+        <footer>
+            <p>Desenvolvido por <strong>Pedro Miranda</strong> 💻</p>
+        </footer>
     </div>
 
-    <script>
-        function calcularIMC() {
-            const altura = parseFloat(document.getElementById('altura').value);
-            const peso = parseFloat(document.getElementById('peso').value);
-            const resultado = document.getElementById('resultado');
-
-            if (!altura || !peso || altura <= 0 || peso <= 0) {
-                alert('Por favor, preencha altura e peso corretamente!');
-                return;
-            }
-
-            const imc = peso / (altura * altura);
-            let categoria = '';
-            let classe = '';
-
-            if (imc < 18.5) {
-                categoria = "Abaixo do peso";
-                classe = "abaixo-peso";
-            } else if (imc >= 18.5 && imc <= 24.9) {
-                categoria = "Peso normal";
-                classe = "peso-normal";
-            } else if (imc >= 25 && imc <= 29.9) {
-                categoria = "Sobrepeso";
-                classe = "sobrepeso";
-            } else if (imc >= 30 && imc <= 39.9) {
-                categoria = "Obesidade";
-                classe = "obesidade";
-            } else {
-                categoria = "Do tamanho de um planeta";
-                classe = "obesidade-grave";
-            }
-
-            resultado.className = `result show ${classe}`;
-            resultado.innerHTML = `
-                <h2>Seu IMC é ${imc.toFixed(2)}</h2>
-                <p>${categoria}</p>
-            `;
-        }
-
-        // Permitir calcular com Enter
-        document.getElementById('peso').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                calcularIMC();
-            }
-        });
-
-        document.getElementById('altura').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                calcularIMC();
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
