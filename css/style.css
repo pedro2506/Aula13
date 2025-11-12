@@ -1,5 +1,4 @@
- <style>
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -78,8 +77,8 @@
             border-radius: 8px;
             font-size: 16px;
             transition: border-color 0.3s;
-            -webkit-appearance: none;
-            -moz-appearance: textfield;
+            --webkit-appearance: none;
+            --moz-appearance: textfield;
         }
 
         /* Remove spinner dos inputs number no mobile */
@@ -275,4 +274,4 @@
                 padding: 12px;
             }
         }
-    </style>
+  
