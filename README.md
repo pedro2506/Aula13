@@ -97,7 +97,9 @@ calculadora-imc/
 
 ## 🧑‍💻 Desenvolvido por
 
-** [Pedro Miranda](https://github.com/pedro2506)**  
+** [Pedro Miranda]**  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pedro2506)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/SEU-PERFIL](https://www.linkedin.com/in/pedro-miranda-510471b4/))
 📧 Email: t3pedropaulo@gmail.com
 💬 Projeto criado com fins educacionais e para portfólio.  
 📅 Criado em **Novembro de 2025**  
