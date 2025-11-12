@@ -1,4 +1,4 @@
-/* === Reset e Fonte === */
+/* === Reset === */
 * {
     margin: 0;
     padding: 0;
@@ -8,30 +8,54 @@
 
 /* === Fundo === */
 body {
-    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    background: radial-gradient(circle at top left, #1e272e, #2d3436 60%, #000000);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-/* === Container Principal === */
+/* === Efeito de luz animado === */
+body::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,150,255,0.3) 0%, transparent 70%);
+    top: -150px;
+    left: -150px;
+    filter: blur(120px);
+    animation: floatLight 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatLight {
+    from { transform: translate(0,0); }
+    to { transform: translate(80px,80px); }
+}
+
+/* === Container === */
 .container {
-    background-color: #fff;
-    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
+    padding: 40px 30px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 /* === Título === */
 .container h1 {
-    color: #0984e3;
     font-size: 1.8rem;
     margin-bottom: 25px;
+    background: linear-gradient(90deg, #74b9ff, #00cec9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* === Campos === */
@@ -44,41 +68,48 @@ body {
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
-    color: #333;
+    color: #dcdde1;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #dfe6e9;
+    padding: 12px;
+    border: none;
     border-radius: 10px;
     outline: none;
-    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
     font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .input-group input:focus {
-    border-color: #0984e3;
-    box-shadow: 0 0 8px rgba(9,132,227,0.3);
+    background: rgba(0, 150, 255, 0.25);
+    box-shadow: 0 0 10px rgba(9,132,227,0.5);
 }
 
 /* === Botão === */
 button {
-    background-color: #0984e3;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #0984e3, #00cec9);
     color: white;
     border: none;
-    padding: 12px 20px;
     border-radius: 10px;
-    font-size: 1rem;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-    width: 100%;
+    transition: all 0.3s;
 }
 
 button:hover {
-    background-color: #74b9ff;
     transform: translateY(-3px);
+    background: linear-gradient(90deg, #00cec9, #0984e3);
+    box-shadow: 0 0 15px rgba(0,150,255,0.5);
 }
 
 /* === Resultado === */
@@ -97,17 +128,17 @@ button:hover {
 }
 
 /* === Categorias === */
-.result.abaixo-peso { background-color: #00cec9; }
-.result.peso-normal { background-color: #55efc4; color: #2d3436; }
-.result.sobrepeso { background-color: #fdcb6e; color: #2d3436; }
-.result.obesidade { background-color: #e17055; }
-.result.obesidade-grave { background-color: #d63031; }
+.result.abaixo-peso { background: #00cec9; }
+.result.peso-normal { background: #55efc4; color: #2d3436; }
+.result.sobrepeso { background: #fdcb6e; color: #2d3436; }
+.result.obesidade { background: #e17055; }
+.result.obesidade-grave { background: #d63031; }
 
 /* === Texto informativo === */
 .info {
     margin-top: 25px;
     font-size: 0.9rem;
-    color: #636e72;
+    color: #dfe6e9;
     line-height: 1.4;
 }
 
